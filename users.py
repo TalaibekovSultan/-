@@ -1,10 +1,9 @@
+import os
 name = input("Введите свое имя: ")
-file_name = name
+file_name = name + ".txt"
 user_data = input('Введите свои данные: ')
 with open(file_name, 'w') as f:
-    s = open(file_name, 'w')
-    s.write(user_data)
-    s.close()
+    f.write(user_data)
 i = 0
 while i == 0:
     print("Здраствуйте", name)
@@ -18,19 +17,12 @@ while i == 0:
         a = input("Желаете изменить свои данные?: ")
         if a == 'да':
             user_data = input('Введите свои данные: ')
-            with open(file_name, 'w') as f:
-                s = open(file_name, 'w')
-                s.write(user_data)
-                s.close()
+            read = '2'
     elif read == '2':
         user_data = input('Введите свои данные: ')
         with open(file_name, 'w') as f:
-            s = open(file_name, 'w')
-            s.write(user_data)
-            s.close()
+            f.write(user_data)
     elif read == '3':
-        import os
-
         directory = os.listdir()
 
         for index, file in enumerate(directory):
