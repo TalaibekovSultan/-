@@ -15,3 +15,4 @@ while i < 6:
     i = i + 1
 def romoshko():
     print(complex_dict)
+    return complex_dict
